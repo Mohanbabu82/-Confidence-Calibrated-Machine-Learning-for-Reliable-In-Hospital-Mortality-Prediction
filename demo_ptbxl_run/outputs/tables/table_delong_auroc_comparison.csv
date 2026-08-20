@@ -1,0 +1,4 @@
+comparison,a,b,auc_a,auc_b,auc_diff,se_diff,z,p_value
+Model comparison: logreg vs lightgbm (uncalibrated),logistic_regression__uncalibrated,lightgbm__uncalibrated,0.7496674447205282,0.8081469768842707,-0.058479532163742576,0.01524186381204712,-3.8367704163266794,0.00012466291342283498
+DWAC rank-order shift: logreg uncalibrated vs dwac,logistic_regression__uncalibrated,logistic_regression__dwac,0.7496674447205282,0.7501066686745476,-0.0004392239540194076,0.0012416385207169357,-0.3537454312917055,0.7235296719235467
+DWAC rank-order shift: lightgbm uncalibrated vs dwac,lightgbm__uncalibrated,lightgbm__dwac,0.8081469768842707,0.8087869889315563,-0.0006400120472855875,0.0004276891046070446,-1.4964422530090462,0.13453844570429663

@@ -1,0 +1,48 @@
+\begin{table}[htbp]
+\centering
+\caption{Table 6. Confidence-aware / referral performance.}
+\label{table6_referral_performance}
+\begin{tabular}{llrrrrrrrrrrrrr}
+\toprule
+model & calibration\_method & referral\_rate & coverage & n\_accepted & n\_referred & selective\_risk & accepted\_case\_error\_rate & sensitivity & specificity & ppv & npv & brier\_score & ece & decision\_threshold \\
+\midrule
+lightgbm & isotonic & 0.0000 & 1.0000 & 404 & 0 & 0.2698 & 0.2698 & 0.6996 & 0.7719 & 0.8069 & 0.6535 & 0.1833 & 0.0618 & 0.5000 \\
+lightgbm & isotonic & 0.0500 & 0.9505 & 384 & 20 & 0.2839 & 0.2839 & 0.6996 & 0.7417 & 0.8069 & 0.6154 & 0.1824 & 0.0884 & 0.5000 \\
+lightgbm & isotonic & 0.1000 & 0.9010 & 364 & 40 & 0.2830 & 0.2830 & 0.7181 & 0.7153 & 0.8069 & 0.6049 & 0.1797 & 0.1014 & 0.5000 \\
+lightgbm & isotonic & 0.2000 & 0.7995 & 323 & 81 & 0.2074 & 0.2074 & 0.7990 & 0.7823 & 0.8548 & 0.7080 & 0.1624 & 0.0836 & 0.5000 \\
+lightgbm & isotonic & 0.3000 & 0.7005 & 283 & 121 & 0.2049 & 0.2049 & 0.8278 & 0.7379 & 0.8466 & 0.7103 & 0.1583 & 0.0882 & 0.5000 \\
+lightgbm & platt & 0.0000 & 1.0000 & 404 & 0 & 0.2772 & 0.2772 & 0.7468 & 0.6901 & 0.7665 & 0.6667 & 0.1806 & 0.0634 & 0.5000 \\
+lightgbm & platt & 0.0500 & 0.9505 & 384 & 20 & 0.2604 & 0.2604 & 0.7600 & 0.7107 & 0.7880 & 0.6766 & 0.1770 & 0.0630 & 0.5000 \\
+lightgbm & platt & 0.1000 & 0.9010 & 364 & 40 & 0.2500 & 0.2500 & 0.7581 & 0.7383 & 0.8069 & 0.6790 & 0.1729 & 0.0669 & 0.5000 \\
+lightgbm & platt & 0.2000 & 0.7995 & 323 & 81 & 0.2167 & 0.2167 & 0.7897 & 0.7734 & 0.8415 & 0.7071 & 0.1609 & 0.0667 & 0.5000 \\
+lightgbm & platt & 0.3000 & 0.7005 & 283 & 121 & 0.2014 & 0.2014 & 0.8103 & 0.7798 & 0.8545 & 0.7203 & 0.1524 & 0.0701 & 0.5000 \\
+lightgbm & uncalibrated & 0.0000 & 1.0000 & 404 & 0 & 0.2772 & 0.2772 & 0.6824 & 0.7778 & 0.8071 & 0.6425 & 0.1825 & 0.0770 & 0.5000 \\
+lightgbm & uncalibrated & 0.0500 & 0.9505 & 384 & 20 & 0.2578 & 0.2578 & 0.7009 & 0.8000 & 0.8307 & 0.6564 & 0.1788 & 0.0824 & 0.5000 \\
+lightgbm & uncalibrated & 0.1000 & 0.9010 & 364 & 40 & 0.2473 & 0.2473 & 0.7075 & 0.8158 & 0.8427 & 0.6667 & 0.1751 & 0.0817 & 0.5000 \\
+lightgbm & uncalibrated & 0.2000 & 0.7995 & 323 & 81 & 0.2322 & 0.2322 & 0.7211 & 0.8346 & 0.8616 & 0.6768 & 0.1677 & 0.0876 & 0.5000 \\
+lightgbm & uncalibrated & 0.3000 & 0.7005 & 283 & 121 & 0.2085 & 0.2085 & 0.7470 & 0.8547 & 0.8794 & 0.7042 & 0.1568 & 0.0861 & 0.5000 \\
+logistic\_regression & isotonic & 0.0000 & 1.0000 & 404 & 0 & 0.2946 & 0.2946 & 0.7639 & 0.6257 & 0.7355 & 0.6605 & 0.2082 & 0.0845 & 0.5000 \\
+logistic\_regression & isotonic & 0.0500 & 0.9505 & 384 & 20 & 0.2917 & 0.2917 & 0.7588 & 0.6346 & 0.7522 & 0.6429 & 0.2069 & 0.0757 & 0.5000 \\
+logistic\_regression & isotonic & 0.1000 & 0.9010 & 364 & 40 & 0.3077 & 0.3077 & 0.7588 & 0.5809 & 0.7522 & 0.5896 & 0.2076 & 0.0874 & 0.5000 \\
+logistic\_regression & isotonic & 0.2000 & 0.7995 & 323 & 81 & 0.2755 & 0.2755 & 0.8439 & 0.5169 & 0.7522 & 0.6559 & 0.2010 & 0.0828 & 0.5000 \\
+logistic\_regression & isotonic & 0.3000 & 0.7005 & 283 & 121 & 0.2721 & 0.2721 & 0.8352 & 0.5347 & 0.7638 & 0.6429 & 0.1996 & 0.1058 & 0.5000 \\
+logistic\_regression & platt & 0.0000 & 1.0000 & 404 & 0 & 0.2946 & 0.2946 & 0.7725 & 0.6140 & 0.7317 & 0.6646 & 0.2048 & 0.0802 & 0.5000 \\
+logistic\_regression & platt & 0.0500 & 0.9505 & 384 & 20 & 0.2917 & 0.2917 & 0.7753 & 0.6115 & 0.7426 & 0.6531 & 0.2026 & 0.0772 & 0.5000 \\
+logistic\_regression & platt & 0.1000 & 0.9010 & 364 & 40 & 0.2802 & 0.2802 & 0.7936 & 0.6096 & 0.7522 & 0.6642 & 0.2000 & 0.0834 & 0.5000 \\
+logistic\_regression & platt & 0.2000 & 0.7995 & 323 & 81 & 0.2663 & 0.2663 & 0.8112 & 0.6142 & 0.7644 & 0.6783 & 0.1951 & 0.0889 & 0.5000 \\
+logistic\_regression & platt & 0.3000 & 0.7005 & 283 & 121 & 0.2544 & 0.2544 & 0.8182 & 0.6262 & 0.7826 & 0.6768 & 0.1900 & 0.0891 & 0.5000 \\
+logistic\_regression & uncalibrated & 0.0000 & 1.0000 & 404 & 0 & 0.3144 & 0.3144 & 0.6567 & 0.7251 & 0.7650 & 0.6078 & 0.2049 & 0.0696 & 0.5000 \\
+logistic\_regression & uncalibrated & 0.0500 & 0.9505 & 384 & 20 & 0.2995 & 0.2995 & 0.6758 & 0.7333 & 0.7708 & 0.6302 & 0.2025 & 0.0628 & 0.5000 \\
+logistic\_regression & uncalibrated & 0.1000 & 0.9010 & 364 & 40 & 0.2885 & 0.2885 & 0.6812 & 0.7516 & 0.7833 & 0.6413 & 0.1999 & 0.0666 & 0.5000 \\
+logistic\_regression & uncalibrated & 0.2000 & 0.7995 & 323 & 81 & 0.2632 & 0.2632 & 0.7011 & 0.7842 & 0.8113 & 0.6646 & 0.1934 & 0.0799 & 0.5000 \\
+logistic\_regression & uncalibrated & 0.3000 & 0.7005 & 283 & 121 & 0.2544 & 0.2544 & 0.7186 & 0.7845 & 0.8276 & 0.6594 & 0.1885 & 0.0778 & 0.5000 \\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+
+\begin{quote}\small
+\textit{Abbreviations:} PPV = Positive Predictive Value (Precision); NPV = Negative Predictive Value; ECE = Expected Calibration Error.
+\textit{Notes:} Cases ranked by predictive entropy; referred cases require full clinician review. Decision threshold=0.5 (matches this task's ~58% base rate).
+\end{quote}

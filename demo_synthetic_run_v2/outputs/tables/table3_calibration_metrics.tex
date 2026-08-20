@@ -1,0 +1,24 @@
+\begin{table}[htbp]
+\centering
+\caption{table3_calibration_metrics}
+\label{table3_calibration_metrics}
+\begin{tabular}{llrrrrrrrr}
+\toprule
+model & calibration\_method & brier\_score & adaptive\_ece & mce & nll & calibration\_intercept & calibration\_slope & ece\_10bins & ece\_15bins \\
+\midrule
+lightgbm & uncalibrated & 0.1385 & 0.0973 & 0.1508 & 0.4465 & 1.8930 & 3.4736 & 0.1041 & 0.1033 \\
+lightgbm & platt & 0.1260 & 0.0288 & 0.1254 & 0.3937 & -0.0008 & 0.9995 & 0.0155 & 0.0223 \\
+lightgbm & isotonic & 0.1225 & 0.0000 & 0.0000 & 0.3794 & 0.0001 & 1.0001 & 0.0000 & 0.0000 \\
+logistic\_regression & uncalibrated & 0.1724 & 0.2179 & 0.4639 & 0.5143 & -1.4771 & 1.0216 & 0.2179 & 0.2179 \\
+logistic\_regression & platt & 0.1143 & 0.0288 & 0.1712 & 0.3652 & -0.0001 & 0.9998 & 0.0207 & 0.0258 \\
+logistic\_regression & isotonic & 0.1096 & 0.0000 & 0.0000 & 0.3485 & -0.0003 & 0.9998 & 0.0000 & 0.0000 \\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+
+\begin{quote}\small
+\textit{Abbreviations:} AUROC = Area Under the Receiver Operating Characteristic curve.
+\textit{Notes:} Synthetic dataset, N=5997
+\end{quote}

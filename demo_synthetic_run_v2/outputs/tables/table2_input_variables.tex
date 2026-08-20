@@ -1,0 +1,40 @@
+\begin{table}[htbp]
+\centering
+\caption{Table 2. Input variables and first-24-hour feature categories.}
+\label{table2_input_variables}
+\begin{tabular}{llll}
+\toprule
+category & variable & description & type \\
+\midrule
+Demographics & age\_at\_admission & Age at admission (years) & numeric \\
+Demographics & gender & Sex (categorical) & categorical \\
+Demographics & admission\_type & Admission type (categorical) & categorical \\
+Demographics & first\_careunit & First ICU care unit (categorical) & categorical \\
+Vital signs (first 24h) & heart\_rate\_mean & Heart rate, mean (bpm) & numeric \\
+Vital signs (first 24h) & map\_bp\_mean & Mean arterial pressure, mean (mmHg) & numeric \\
+Vital signs (first 24h) & resp\_rate\_mean & Respiratory rate, mean (/min) & numeric \\
+Vital signs (first 24h) & temp\_mean & Temperature, mean (degC) & numeric \\
+Vital signs (first 24h) & spo2\_mean & SpO2, mean (\%) & numeric \\
+Vital signs (first 24h) & gcs\_total\_min & Glasgow Coma Scale, worst/min & numeric \\
+Laboratory values (first 24h) & creatinine\_max & Creatinine, max (mg/dL) & numeric \\
+Laboratory values (first 24h) & bun\_max & Blood urea nitrogen, max (mg/dL) & numeric \\
+Laboratory values (first 24h) & sodium\_min & Sodium, min (mEq/L) & numeric \\
+Laboratory values (first 24h) & potassium\_max & Potassium, max (mEq/L) & numeric \\
+Laboratory values (first 24h) & glucose\_max & Glucose, max (mg/dL) & numeric \\
+Laboratory values (first 24h) & wbc\_max & White blood cell count, max (K/uL) & numeric \\
+Laboratory values (first 24h) & hemoglobin\_min & Hemoglobin, min (g/dL) & numeric \\
+Laboratory values (first 24h) & platelet\_min & Platelet count, min (K/uL) & numeric \\
+Laboratory values (first 24h) & lactate\_max & Lactate, max (mmol/L) & numeric \\
+Laboratory values (first 24h) & bicarbonate\_min & Bicarbonate, min (mEq/L) & numeric \\
+Laboratory values (first 24h) & bilirubin\_max & Bilirubin, max (mg/dL) & numeric \\
+Clinical interventions / output (first 24h) & urine\_output\_24h & Urine output, 24h total (mL) & numeric \\
+Clinical interventions / output (first 24h) & mech\_vent\_flag & Mechanical ventilation (0/1) & numeric \\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+
+\begin{quote}\small
+\textit{Notes:} 23 variables across 4 clinical categories.
+\end{quote}

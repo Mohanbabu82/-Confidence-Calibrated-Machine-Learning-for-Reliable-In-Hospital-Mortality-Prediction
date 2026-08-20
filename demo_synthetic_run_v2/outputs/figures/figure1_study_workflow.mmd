@@ -1,0 +1,12 @@
+flowchart TD
+    N0["Total ICU stays loaded<br/>n = 5997"]
+    N1["Excluded: duplicate rows<br/>n = 0"]
+    N2["Final analysis cohort (N)<br/>n = 5997"]
+    N3["Training set (70%)<br/>n = 4197"]
+    N4["Validation set (10%)<br/>n = 600"]
+    N5["Held-out test set (20%)<br/>n = 1200"]
+    N0 --> N1
+    N1 --> N2
+    N2 --> N3
+    N3 --> N4
+    N4 --> N5

@@ -1,0 +1,12 @@
+flowchart TD
+    N0["Total PTB-XL records<br/>n = 21799"]
+    N1["Records with parseable diagnostic superclass<br/>n = 21388"]
+    N2["Stratified subsample (seed=42)<br/>n = 4000"]
+    N3["Training set (folds 1-8)<br/>n = 3195"]
+    N4["Validation set (fold 9)<br/>n = 401"]
+    N5["Held-out test set (fold 10)<br/>n = 404"]
+    N0 --> N1
+    N1 --> N2
+    N2 --> N3
+    N3 --> N4
+    N4 --> N5

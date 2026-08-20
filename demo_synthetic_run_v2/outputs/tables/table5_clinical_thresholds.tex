@@ -1,0 +1,30 @@
+\begin{table}[htbp]
+\centering
+\caption{table5_clinical_thresholds}
+\label{table5_clinical_thresholds}
+\begin{tabular}{llrrrrrrr}
+\toprule
+model & calibration\_method & threshold & sensitivity & specificity & ppv & npv & f1\_score & balanced\_accuracy \\
+\midrule
+logistic\_regression & uncalibrated & 0.2000 & 0.9395 & 0.3706 & 0.2457 & 0.9656 & 0.3896 & 0.6550 \\
+logistic\_regression & uncalibrated & 0.5000 & 0.6930 & 0.7675 & 0.3942 & 0.9197 & 0.5025 & 0.7303 \\
+logistic\_regression & platt & 0.2000 & 0.6372 & 0.7888 & 0.3971 & 0.9088 & 0.4893 & 0.7130 \\
+logistic\_regression & platt & 0.5000 & 0.3209 & 0.9584 & 0.6273 & 0.8661 & 0.4246 & 0.6397 \\
+logistic\_regression & isotonic & 0.2000 & 0.6000 & 0.8193 & 0.4202 & 0.9037 & 0.4943 & 0.7096 \\
+logistic\_regression & isotonic & 0.5000 & 0.3209 & 0.9584 & 0.6273 & 0.8661 & 0.4246 & 0.6397 \\
+lightgbm & uncalibrated & 0.2000 & 0.9349 & 0.3310 & 0.2337 & 0.9588 & 0.3740 & 0.6329 \\
+lightgbm & uncalibrated & 0.5000 & 0.0000 & 1.0000 & NaN & 0.8208 & NaN & 0.5000 \\
+lightgbm & platt & 0.2000 & 0.6512 & 0.7381 & 0.3518 & 0.9065 & 0.4568 & 0.6946 \\
+lightgbm & platt & 0.5000 & 0.1349 & 0.9777 & 0.5686 & 0.8381 & 0.2180 & 0.5563 \\
+lightgbm & isotonic & 0.2000 & 0.6744 & 0.7289 & 0.3519 & 0.9112 & 0.4625 & 0.7017 \\
+lightgbm & isotonic & 0.5000 & 0.1535 & 0.9746 & 0.5690 & 0.8406 & 0.2418 & 0.5641 \\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+
+\begin{quote}\small
+\textit{Abbreviations:} AUROC = Area Under the Receiver Operating Characteristic curve.
+\textit{Notes:} Synthetic dataset, N=5997
+\end{quote}

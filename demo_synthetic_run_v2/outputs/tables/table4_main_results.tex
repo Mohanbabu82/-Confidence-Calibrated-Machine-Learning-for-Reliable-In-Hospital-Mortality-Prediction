@@ -1,0 +1,24 @@
+\begin{table}[htbp]
+\centering
+\caption{table4_main_results}
+\label{table4_main_results}
+\begin{tabular}{llrlllrrrrrrrr}
+\toprule
+model & calibration\_method & n\_test & auroc & brier\_score & ece & auprc & primary\_threshold & sensitivity\_at\_primary\_threshold & specificity\_at\_primary\_threshold & ppv\_at\_primary\_threshold & npv\_at\_primary\_threshold & f1\_score\_at\_primary\_threshold & balanced\_accuracy\_at\_primary\_threshold \\
+\midrule
+logistic\_regression & uncalibrated & 1200 & 0.7982 (0.7670–0.8299) & 0.1721 (0.1621–0.1837) & 0.2072 (0.1946–0.2205) & 0.5197 & 0.2000 & 0.9395 & 0.3706 & 0.2457 & 0.9656 & 0.3896 & 0.6550 \\
+logistic\_regression & platt & 1200 & 0.7982 (0.7670–0.8299) & 0.1170 (0.1083–0.1255) & 0.0324 (0.0223–0.0524) & 0.5197 & 0.2000 & 0.6372 & 0.7888 & 0.3971 & 0.9088 & 0.4893 & 0.7130 \\
+logistic\_regression & isotonic & 1200 & 0.7964 (0.7650–0.8278) & 0.1179 (0.1089–0.1269) & 0.0314 (0.0192–0.0507) & 0.4778 & 0.2000 & 0.6000 & 0.8193 & 0.4202 & 0.9037 & 0.4943 & 0.7096 \\
+lightgbm & uncalibrated & 1200 & 0.7639 (0.7296–0.7959) & 0.1379 (0.1355–0.1406) & 0.0908 (0.0733–0.1102) & 0.4161 & 0.2000 & 0.9349 & 0.3310 & 0.2337 & 0.9588 & 0.3740 & 0.6329 \\
+lightgbm & platt & 1200 & 0.7639 (0.7296–0.7959) & 0.1260 (0.1197–0.1328) & 0.0220 (0.0147–0.0444) & 0.4161 & 0.2000 & 0.6512 & 0.7381 & 0.3518 & 0.9065 & 0.4568 & 0.6946 \\
+lightgbm & isotonic & 1200 & 0.7638 (0.7295–0.7958) & 0.1263 (0.1198–0.1332) & 0.0307 (0.0223–0.0543) & 0.3961 & 0.2000 & 0.6744 & 0.7289 & 0.3519 & 0.9112 & 0.4625 & 0.7017 \\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+
+\begin{quote}\small
+\textit{Abbreviations:} AUROC = Area Under the Receiver Operating Characteristic curve.
+\textit{Notes:} Synthetic dataset, N=5997
+\end{quote}

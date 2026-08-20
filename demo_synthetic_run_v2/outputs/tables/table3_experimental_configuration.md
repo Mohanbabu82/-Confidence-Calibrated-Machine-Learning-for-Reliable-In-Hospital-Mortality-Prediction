@@ -1,0 +1,29 @@
+**Table 3. Experimental/model configuration.**
+
+| parameter                           | value                                                                                                                                 |
+|:------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------|
+| Random seed                         | 42                                                                                                                                    |
+| Train / validation / test split     | 70% / 10% / 20%                                                                                                                       |
+| Split strategy                      | Patient-level, stratified by mortality                                                                                                |
+| Preprocessing (numeric)             | Median imputation + missingness indicator, standard scaling                                                                           |
+| Preprocessing (categorical)         | One-hot encoding                                                                                                                      |
+| Model 1                             | Logistic regression (class_weight=balanced, C selected via validation AUROC grid search)                                              |
+| C grid                              | [0.001, 0.01, 0.1, 1.0, 10.0]                                                                                                         |
+| Model 2                             | LightGBM (scale_pos_weight computed from train class counts, learning_rate selected via validation AUROC grid search, early stopping) |
+| learning_rate grid                  | [0.01, 0.05, 0.1]                                                                                                                     |
+| early_stopping_rounds               | 20                                                                                                                                    |
+| num_leaves / max_depth              | 31 / -1                                                                                                                               |
+| Calibration methods                 | Platt scaling (sigmoid), isotonic regression; fit on validation-set predictions only                                                  |
+| ECE bin counts evaluated            | (10, 15)                                                                                                                              |
+| Bootstrap resamples (95% CI)        | 1000                                                                                                                                  |
+| Bootstrap strategy                  | Stratified by outcome class, resampled with replacement, class counts preserved                                                       |
+| Primary clinical decision threshold | 0.2                                                                                                                                   |
+| Test-set usage policy               | Unlocked exactly once, after model/calibration selection is frozen on train+validation only                                           |
+| Software: Python                    | 3.11.9                                                                                                                                |
+| Software: pandas / numpy            | 2.2.2 / 1.26.4                                                                                                                        |
+| Software: scikit-learn              | 1.5.1                                                                                                                                 |
+| Software: lightgbm                  | 4.5.0                                                                                                                                 |
+
+*Notes:*
+
+- Seed, split, preprocessing, model, calibration, and bootstrap settings.

@@ -1,0 +1,38 @@
+\begin{table}[htbp]
+\centering
+\caption{Table 3. Experimental/model configuration.}
+\label{table3_experimental_configuration}
+\begin{tabular}{ll}
+\toprule
+parameter & value \\
+\midrule
+Random seed & 42 \\
+Train / validation / test split & 70\% / 10\% / 20\% \\
+Split strategy & Patient-level, stratified by mortality \\
+Preprocessing (numeric) & Median imputation + missingness indicator, standard scaling \\
+Preprocessing (categorical) & One-hot encoding \\
+Model 1 & Logistic regression (class\_weight=balanced, C selected via validation AUROC grid search) \\
+  C grid & [0.001, 0.01, 0.1, 1.0, 10.0] \\
+Model 2 & LightGBM (scale\_pos\_weight computed from train class counts, learning\_rate selected via validation AUROC grid search, early stopping) \\
+  learning\_rate grid & [0.01, 0.05, 0.1] \\
+  early\_stopping\_rounds & 20 \\
+  num\_leaves / max\_depth & 31 / -1 \\
+Calibration methods & Platt scaling (sigmoid), isotonic regression; fit on validation-set predictions only \\
+ECE bin counts evaluated & (10, 15) \\
+Bootstrap resamples (95\% CI) & 1000 \\
+Bootstrap strategy & Stratified by outcome class, resampled with replacement, class counts preserved \\
+Primary clinical decision threshold & 0.2 \\
+Test-set usage policy & Unlocked exactly once, after model/calibration selection is frozen on train+validation only \\
+Software: Python & 3.11.9 \\
+Software: pandas / numpy & 2.2.2 / 1.26.4 \\
+Software: scikit-learn & 1.5.1 \\
+Software: lightgbm & 4.5.0 \\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+
+\begin{quote}\small
+\textit{Notes:} Seed, split, preprocessing, model, calibration, and bootstrap settings.
+\end{quote}

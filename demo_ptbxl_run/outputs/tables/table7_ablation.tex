@@ -1,0 +1,32 @@
+\begin{table}[htbp]
+\centering
+\caption{Table 7. Feature-group ablation (lead groups + demographics).}
+\label{table7_ablation}
+\begin{tabular}{lrlrr}
+\toprule
+feature\_configuration & n\_features & model & test\_auroc & test\_brier \\
+\midrule
+Full model (all leads + demographics) & 64 & logistic\_regression & 0.7497 & 0.2049 \\
+Full model (all leads + demographics) & 64 & lightgbm & 0.8081 & 0.1825 \\
+Limb leads (I,II,III,aVR,aVL,aVF) only & 30 & logistic\_regression & 0.6896 & 0.2227 \\
+Limb leads (I,II,III,aVR,aVL,aVF) only & 30 & lightgbm & 0.7330 & 0.2109 \\
+Precordial leads (V1-V6) only & 30 & logistic\_regression & 0.6281 & 0.2413 \\
+Precordial leads (V1-V6) only & 30 & lightgbm & 0.7217 & 0.2193 \\
+Demographics (age,height,weight,gender) only & 4 & logistic\_regression & 0.7316 & 0.2132 \\
+Demographics (age,height,weight,gender) only & 4 & lightgbm & 0.7070 & 0.2226 \\
+Full minus Limb leads & 34 & logistic\_regression & 0.7190 & 0.2157 \\
+Full minus Limb leads & 34 & lightgbm & 0.7611 & 0.2052 \\
+Full minus Precordial leads & 34 & logistic\_regression & 0.7635 & 0.1992 \\
+Full minus Precordial leads & 34 & lightgbm & 0.7900 & 0.1891 \\
+Full minus Demographics & 60 & logistic\_regression & 0.6953 & 0.2240 \\
+Full minus Demographics & 60 & lightgbm & 0.7794 & 0.1945 \\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+
+\begin{quote}\small
+\textit{Abbreviations:} AUROC = Area Under the Receiver Operating Characteristic curve.
+\textit{Notes:} Hyperparameters fixed at the values selected for the full-feature model (logreg C=0.01; LightGBM learning_rate=0.05, 100 iterations); only the input feature set varies. Test set, single evaluation per configuration (no bootstrap CI).
+\end{quote}

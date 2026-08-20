@@ -1,0 +1,12 @@
+flowchart TD
+    N0["EHR features<br/>(first 24h ICU stay — demographics, vitals, labs;<br/>MIMIC-IV Clinical Database Demo v2.2)"]
+    N1["Preprocessing<br/>(median imputation + missingness indicators,<br/>one-hot encoding, standard scaling — fit on train split only)"]
+    N2["Base models<br/>(Logistic Regression [class_weight=balanced] and LightGBM<br/>[scale_pos_weight] — validation-selected hyperparameters)"]
+    N3["Calibration layer<br/>(Platt scaling / isotonic regression —<br/>fit on validation predictions only)"]
+    N4["Calibrated risk score"]
+    N5["Clinical decision support / referral<br/>(risk score is an input to clinician judgment,<br/>not an autonomous diagnosis)"]
+    N0 --> N1
+    N1 --> N2
+    N2 --> N3
+    N3 --> N4
+    N4 --> N5

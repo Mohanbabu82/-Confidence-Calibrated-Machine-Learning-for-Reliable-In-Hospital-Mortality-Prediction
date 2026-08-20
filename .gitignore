@@ -1,0 +1,68 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data (never commit real patient data)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Outputs
+outputs/tables/*
+outputs/figures/*
+!outputs/tables/.gitkeep
+!outputs/figures/.gitkeep
+
+# Logs
+logs/
+*.log
+
+# Model artifacts
+*.pkl
+*.joblib
+*.pt
+*.pth
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Env / secrets
+.env
+*.env
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Large generated artifacts from demo/dev runs (regenerable from code + real
+# data; not appropriate to redistribute via git, especially raw PTB-XL
+# signal files and multi-MB bundle zips)
+*.zip
+*.parquet
+demo_ptbxl_run/signals/
+demo_ptbxl_run/raw_meta/*.parquet
+demo_synthetic_run/data/
+demo_synthetic_run/raw_csvs/
+demo_synthetic_run/data_processed/
+MOHAN_OUTPUT/
+outputs/models/*.joblib
+outputs/models/*.pkl
+demo_*_run*/outputs/models/
+demo_*_run*/outputs/predictions/
+
+# Claude Code local tool config (not project content)
+.claude/

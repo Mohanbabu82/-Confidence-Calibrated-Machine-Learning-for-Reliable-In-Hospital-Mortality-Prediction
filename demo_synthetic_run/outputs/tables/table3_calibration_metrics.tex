@@ -1,0 +1,24 @@
+\begin{table}[htbp]
+\centering
+\caption{Table 3. Calibration metrics (validation).}
+\label{table3_calibration_metrics}
+\begin{tabular}{llrrrrrrrr}
+\toprule
+model & calibration\_method & brier\_score & adaptive\_ece & mce & nll & calibration\_intercept & calibration\_slope & ece\_10bins & ece\_15bins \\
+\midrule
+lightgbm & uncalibrated & 0.0823 & 0.1461 & 0.2326 & 0.3030 & -2.1926 & 0.0952 & 0.0454 & 0.1121 \\
+lightgbm & platt & 0.0764 & 0.1249 & 0.0000 & 0.2867 & -0.3550 & 0.8522 & 0.0000 & 0.0000 \\
+lightgbm & isotonic & 0.0714 & 0.0000 & 0.0000 & 0.2392 & -0.1004 & 0.9440 & 0.0000 & 0.0000 \\
+logistic\_regression & uncalibrated & 0.2362 & 0.4054 & 0.4847 & 0.6654 & -6.5964 & 175.2910 & 0.4054 & 0.4054 \\
+logistic\_regression & platt & 0.0000 & 0.0001 & 0.0026 & 0.0004 & -0.0543 & 1.6269 & 0.0004 & 0.0004 \\
+logistic\_regression & isotonic & 0.0000 & 0.0000 & 0.0000 & 0.0000 & -0.0602 & 0.9982 & 0.0000 & 0.0000 \\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+
+\begin{quote}\small
+\textit{Abbreviations:} ECE = Expected Calibration Error; MCE = Maximum Calibration Error; NLL = Negative Log-Likelihood.
+\textit{Notes:} In-sample calibration.
+\end{quote}

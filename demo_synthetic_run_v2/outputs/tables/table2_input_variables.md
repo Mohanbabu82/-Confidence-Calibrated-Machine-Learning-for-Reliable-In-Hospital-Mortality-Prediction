@@ -1,0 +1,31 @@
+**Table 2. Input variables and first-24-hour feature categories.**
+
+| category                                    | variable         | description                         | type        |
+|:--------------------------------------------|:-----------------|:------------------------------------|:------------|
+| Demographics                                | age_at_admission | Age at admission (years)            | numeric     |
+| Demographics                                | gender           | Sex (categorical)                   | categorical |
+| Demographics                                | admission_type   | Admission type (categorical)        | categorical |
+| Demographics                                | first_careunit   | First ICU care unit (categorical)   | categorical |
+| Vital signs (first 24h)                     | heart_rate_mean  | Heart rate, mean (bpm)              | numeric     |
+| Vital signs (first 24h)                     | map_bp_mean      | Mean arterial pressure, mean (mmHg) | numeric     |
+| Vital signs (first 24h)                     | resp_rate_mean   | Respiratory rate, mean (/min)       | numeric     |
+| Vital signs (first 24h)                     | temp_mean        | Temperature, mean (degC)            | numeric     |
+| Vital signs (first 24h)                     | spo2_mean        | SpO2, mean (%)                      | numeric     |
+| Vital signs (first 24h)                     | gcs_total_min    | Glasgow Coma Scale, worst/min       | numeric     |
+| Laboratory values (first 24h)               | creatinine_max   | Creatinine, max (mg/dL)             | numeric     |
+| Laboratory values (first 24h)               | bun_max          | Blood urea nitrogen, max (mg/dL)    | numeric     |
+| Laboratory values (first 24h)               | sodium_min       | Sodium, min (mEq/L)                 | numeric     |
+| Laboratory values (first 24h)               | potassium_max    | Potassium, max (mEq/L)              | numeric     |
+| Laboratory values (first 24h)               | glucose_max      | Glucose, max (mg/dL)                | numeric     |
+| Laboratory values (first 24h)               | wbc_max          | White blood cell count, max (K/uL)  | numeric     |
+| Laboratory values (first 24h)               | hemoglobin_min   | Hemoglobin, min (g/dL)              | numeric     |
+| Laboratory values (first 24h)               | platelet_min     | Platelet count, min (K/uL)          | numeric     |
+| Laboratory values (first 24h)               | lactate_max      | Lactate, max (mmol/L)               | numeric     |
+| Laboratory values (first 24h)               | bicarbonate_min  | Bicarbonate, min (mEq/L)            | numeric     |
+| Laboratory values (first 24h)               | bilirubin_max    | Bilirubin, max (mg/dL)              | numeric     |
+| Clinical interventions / output (first 24h) | urine_output_24h | Urine output, 24h total (mL)        | numeric     |
+| Clinical interventions / output (first 24h) | mech_vent_flag   | Mechanical ventilation (0/1)        | numeric     |
+
+*Notes:*
+
+- 23 variables across 4 clinical categories.

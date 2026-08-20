@@ -1,0 +1,30 @@
+\begin{table}[htbp]
+\centering
+\caption{Table 5. Clinical thresholds (test set).}
+\label{table5_clinical_thresholds}
+\begin{tabular}{llrrrrrrr}
+\toprule
+model & calibration\_method & threshold & sensitivity & specificity & ppv & npv & f1\_score & balanced\_accuracy \\
+\midrule
+logistic\_regression & uncalibrated & 0.2000 & 1.0000 & 0.0000 & 0.0833 & NaN & 0.1538 & 0.5000 \\
+logistic\_regression & uncalibrated & 0.5000 & 0.5000 & 0.7727 & 0.1667 & 0.9444 & 0.2500 & 0.6364 \\
+logistic\_regression & platt & 0.2000 & 0.0000 & 0.7727 & 0.0000 & 0.8947 & NaN & 0.3864 \\
+logistic\_regression & platt & 0.5000 & 0.0000 & 0.8182 & 0.0000 & 0.9000 & NaN & 0.4091 \\
+logistic\_regression & isotonic & 0.2000 & 0.0000 & 0.7727 & 0.0000 & 0.8947 & NaN & 0.3864 \\
+logistic\_regression & isotonic & 0.5000 & 0.0000 & 0.8182 & 0.0000 & 0.9000 & NaN & 0.4091 \\
+lightgbm & uncalibrated & 0.2000 & 0.0000 & 0.8636 & 0.0000 & 0.9048 & NaN & 0.4318 \\
+lightgbm & uncalibrated & 0.5000 & 0.0000 & 1.0000 & NaN & 0.9167 & NaN & 0.5000 \\
+lightgbm & platt & 0.2000 & 0.0000 & 1.0000 & NaN & 0.9167 & NaN & 0.5000 \\
+lightgbm & platt & 0.5000 & 0.0000 & 1.0000 & NaN & 0.9167 & NaN & 0.5000 \\
+lightgbm & isotonic & 0.2000 & 0.0000 & 1.0000 & NaN & 0.9167 & NaN & 0.5000 \\
+lightgbm & isotonic & 0.5000 & 0.0000 & 1.0000 & NaN & 0.9167 & NaN & 0.5000 \\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+
+\begin{quote}\small
+\textit{Abbreviations:} PPV = Positive Predictive Value (Precision); NPV = Negative Predictive Value.
+\textit{Notes:} Thresholds: 0.2, 0.5.
+\end{quote}

@@ -1,0 +1,19 @@
+feature_configuration,n_features,model,test_auroc,test_brier
+Full model (all categories),23,logistic_regression,0.798248140715382,0.1721476986027093
+Full model (all categories),23,lightgbm,0.7639286979105183,0.137919568051247
+Demographics only,4,logistic_regression,0.5798016763074018,0.2424308924565321
+Demographics only,4,lightgbm,0.5618628261126195,0.1563927466018388
+Vital signs only,6,logistic_regression,0.6696163380946759,0.2229447002605131
+Vital signs only,6,lightgbm,0.6364750324636996,0.1503384994044807
+Laboratory values only,11,logistic_regression,0.7233903907448943,0.2038518388122855
+Laboratory values only,11,lightgbm,0.708176130326998,0.1436432322882247
+Clinical interventions/output only,2,logistic_regression,0.5256569472317318,0.2496183696667757
+Clinical interventions/output only,2,lightgbm,0.5191287923503718,0.1582940617009156
+Full minus Demographics,19,logistic_regression,0.7896730020068469,0.1794652273507984
+Full minus Demographics,19,lightgbm,0.7598276472671468,0.1393058109319208
+Full minus Vital signs,17,logistic_regression,0.7328013221579506,0.1966009464924006
+Full minus Vital signs,17,lightgbm,0.7130090898359107,0.1424129132212658
+Full minus Laboratory values,12,logistic_regression,0.6936701688112383,0.2143286259751206
+Full minus Laboratory values,12,lightgbm,0.6665871797898714,0.147479488494416
+Full minus Clinical interventions/output,21,logistic_regression,0.7985220162908747,0.1728833906748764
+Full minus Clinical interventions/output,21,lightgbm,0.766740644552001,0.13783179565791

@@ -1,0 +1,38 @@
+\begin{table}[htbp]
+\centering
+\caption{Table 2. Hyperparameters.}
+\label{table2_hyperparameters}
+\begin{tabular}{lll}
+\toprule
+model & hyperparameter & value \\
+\midrule
+logistic\_regression & penalty & l2 \\
+logistic\_regression & solver & lbfgs \\
+logistic\_regression & C & 0.001 \\
+logistic\_regression & max\_iter & 1000 \\
+logistic\_regression & class\_weight & balanced \\
+logistic\_regression & random\_state & 42 \\
+logistic\_regression & global\_random\_seed & 42 \\
+logistic\_regression & val\_auroc & 1.0 \\
+logistic\_regression & runtime\_seconds & 0.04 \\
+lightgbm & learning\_rate & 0.1 \\
+lightgbm & n\_estimators\_upper\_bound & 300 \\
+lightgbm & best\_iteration & 7 \\
+lightgbm & num\_leaves & 31 \\
+lightgbm & max\_depth & -1 \\
+lightgbm & early\_stopping\_rounds & 20 \\
+lightgbm & scale\_pos\_weight & 11.0 \\
+lightgbm & random\_state & 42 \\
+lightgbm & global\_random\_seed & 42 \\
+lightgbm & val\_auroc & 0.5455 \\
+lightgbm & runtime\_seconds & 0.29 \\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+
+\begin{quote}\small
+\textit{Abbreviations:} AUROC = Area Under the Receiver Operating Characteristic curve.
+\textit{Notes:} Selected on validation AUROC.
+\end{quote}

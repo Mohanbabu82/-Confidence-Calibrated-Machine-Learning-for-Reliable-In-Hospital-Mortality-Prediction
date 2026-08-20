@@ -1,0 +1,5 @@
+stage,n
+Total PTB-XL records,21799
+Records with a parseable diagnostic superclass,21388
+Stratified subsample selected (seed=42),4000
+Final analysis cohort (N),4000

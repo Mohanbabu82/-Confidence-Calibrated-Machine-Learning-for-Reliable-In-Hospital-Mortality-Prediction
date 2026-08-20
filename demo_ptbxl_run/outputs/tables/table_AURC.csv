@@ -1,0 +1,9 @@
+model,calibration_method,AURC,coverage_range_used,n_points
+lightgbm,platt,0.14139448675617208,"[0.06, 1.00]",48
+lightgbm,dwac,0.14360994837322197,"[0.06, 1.00]",48
+lightgbm,uncalibrated,0.14951416597123734,"[0.06, 1.00]",48
+lightgbm,isotonic,0.15903014058993753,"[0.06, 1.00]",48
+logistic_regression,isotonic,0.1892741137002734,"[0.06, 1.00]",48
+logistic_regression,platt,0.1994369789720472,"[0.06, 1.00]",48
+logistic_regression,dwac,0.1999519100376422,"[0.06, 1.00]",48
+logistic_regression,uncalibrated,0.211301574075155,"[0.06, 1.00]",48

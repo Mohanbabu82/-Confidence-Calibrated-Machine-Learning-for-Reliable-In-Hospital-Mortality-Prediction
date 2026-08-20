@@ -1,0 +1,26 @@
+\begin{table}[htbp]
+\centering
+\caption{Table 5. Calibration performance comparison (held-out test set).}
+\label{table5_calibration_performance_test}
+\begin{tabular}{llrrrrrrrr}
+\toprule
+model & calibration\_method & brier\_score & adaptive\_ece & mce & nll & calibration\_intercept & calibration\_slope & ece\_10bins & ece\_15bins \\
+\midrule
+lightgbm & isotonic & 0.1263 & 0.0301 & 0.0667 & 0.4494 & -0.7057 & 0.3706 & 0.0307 & 0.0319 \\
+lightgbm & platt & 0.1260 & 0.0285 & 0.0799 & 0.4032 & -0.0760 & 0.8796 & 0.0220 & 0.0286 \\
+lightgbm & uncalibrated & 0.1379 & 0.1036 & 0.1975 & 0.4454 & 1.5885 & 3.0545 & 0.0908 & 0.1045 \\
+logistic\_regression & isotonic & 0.1179 & 0.0329 & 0.4618 & 0.3884 & -0.4526 & 0.6399 & 0.0314 & 0.0347 \\
+logistic\_regression & platt & 0.1170 & 0.0250 & 0.1852 & 0.3770 & -0.1450 & 0.8625 & 0.0324 & 0.0317 \\
+logistic\_regression & uncalibrated & 0.1721 & 0.2072 & 0.4822 & 0.5158 & -1.4190 & 0.8806 & 0.2072 & 0.2072 \\
+lightgbm & dwac & 0.1261 & 0.0325 & 0.0639 & 0.4058 & -0.1907 & 0.7845 & 0.0293 & 0.0298 \\
+logistic\_regression & dwac & 0.1170 & 0.0268 & 0.2500 & 0.3777 & -0.1893 & 0.8256 & 0.0294 & 0.0291 \\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+
+\begin{quote}\small
+\textit{Abbreviations:} ECE = Expected Calibration Error; MCE = Maximum Calibration Error; NLL = Negative Log-Likelihood.
+\textit{Notes:} Brier, ECE (10/15 bins), MCE, NLL, intercept, slope. Test set, computed once. dwac = Density-Weighted Adaptive Calibration, the one genuinely novel component in this pipeline (see Methods); Platt and isotonic are established, unmodified methods.
+\end{quote}
