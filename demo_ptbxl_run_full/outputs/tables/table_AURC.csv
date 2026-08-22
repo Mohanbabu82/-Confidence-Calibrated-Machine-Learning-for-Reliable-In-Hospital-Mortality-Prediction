@@ -1,0 +1,9 @@
+model,calibration_method,AURC
+lightgbm,dwac,0.10795277907869451
+lightgbm,platt,0.10870784361345487
+lightgbm,isotonic,0.10924396747541956
+lightgbm,uncalibrated,0.11225806448839842
+logistic_regression,dwac,0.15262665692298916
+logistic_regression,platt,0.15289519134477944
+logistic_regression,isotonic,0.1529706108529302
+logistic_regression,uncalibrated,0.16125501947374007

@@ -1,0 +1,7 @@
+model,hyperparameter,value
+logistic_regression,C,0.01
+logistic_regression,val_auroc,0.814398675722527
+lightgbm,learning_rate,0.05
+lightgbm,best_iteration,300.0
+lightgbm,scale_pos_weight,0.7360024387765471
+lightgbm,val_auroc,0.869478032908011

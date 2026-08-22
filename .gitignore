@@ -55,6 +55,8 @@ dist/
 *.parquet
 demo_ptbxl_run/signals/
 demo_ptbxl_run/raw_meta/*.parquet
+demo_ptbxl_run_full/signals/
+demo_ptbxl_run_full/*.parquet
 demo_synthetic_run/data/
 demo_synthetic_run/raw_csvs/
 demo_synthetic_run/data_processed/
