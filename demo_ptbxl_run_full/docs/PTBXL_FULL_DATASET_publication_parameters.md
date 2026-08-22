@@ -129,3 +129,36 @@ experiments/data, not just more compute on existing features:
 - Prospective/external validation
 
 The "4,000-record subsample" limitation specifically is now resolved.
+
+---
+
+## Addendum: AUPRC + per-row AUROC bootstrap CIs (added on request)
+
+New table: `outputs/tables/table_discrimination_auroc_auprc_ci.csv` (+`.md`/`.tex`).
+For every model x calibration-method row (8 total), reports AUROC and AUPRC
+with 95% stratified bootstrap CIs (1000 resamples, seed=42), computed from
+`test_predictions_all.parquet` — no new modeling, same real test-set
+predictions used everywhere else in this run.
+
+Sanity check: the full-model rows match the previously-reported ablation-table
+CIs exactly (LightGBM uncalibrated 0.8464 [0.8305, 0.8618]; logistic
+regression uncalibrated 0.7954 [0.7761, 0.8142]) — no drift between the two
+computations.
+
+AUROC/AUPRC are numerically identical across uncalibrated/Platt/DWAC within
+a model (these calibration methods preserve rank order); isotonic regression
+shows tiny differences (e.g. LightGBM AUROC 0.8457 vs 0.8464) because its
+step-function output ties adjacent scores in flat regions, a real and
+expected property of isotonic regression, not an error.
+
+## Addendum: sex-coding convention — NOT independently verifiable from local files
+
+I checked every documentation file bundled inside the PTB-XL v1.0.3 zip
+itself (`LICENSE.txt`, `example_physionet.py`, `ptbxl_v102_changelog.txt`,
+`ptbxl_v103_changelog.txt`) for an explicit sex-encoding statement — **none
+of them state it**. The `0=Male, 1=Female` convention is documented on
+PhysioNet's PTB-XL project page and in Wagner et al. (2020, *Scientific
+Data*), but that source is external to the files available in this
+project. The relabeling should be treated as "widely documented
+convention, not locally verified" rather than "confirmed" until checked
+against physionet.org/content/ptb-xl/1.0.3 directly.
